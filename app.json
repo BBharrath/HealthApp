@@ -5,3 +5,47 @@
   "keywords": ["health", "node", "static"],
   "website": "https://github.com/BBharrath/HealthApp"
 }
+{
+  "name": "health",
+  "description": "This app does one little thing, and does it well.",
+  "keywords": [
+    "health",
+    "HTML5",
+    "node"
+  ],
+  "website": "https://HealthApp.com/",
+  "repository": "https://github.com/BBharrath/HealthApp",
+  "success_url": "/welcome",
+  "scripts": {
+    "postdeploy": "bundle exec rake bootstrap"
+  },
+  "env": {
+    "SECRET_TOKEN": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    },
+    "WEB_CONCURRENCY": {
+      "description": "The number of processes to run.",
+      "value": "5"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 2,
+      "size": "Performance-M"
+    }
+  },
+
+  "buildpacks": [
+    {
+      "url": "https://github.com/BBharrath/HealthApp"
+    }
+  ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "bundle exec rake test"
+      }
+    }
+  }
+}
