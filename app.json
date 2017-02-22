@@ -1,10 +1,4 @@
-{
-  "name": "health",
-  "description": "Beautiful Static documentation",
-  "repository": "https://github.com/BBharrath/HealthApp.git",
-  "keywords": ["health", "node", "static"],
-  "website": "https://github.com/BBharrath/HealthApp"
-}
+
 {
   "name": "health",
   "description": "This app does one little thing, and does it well.",
